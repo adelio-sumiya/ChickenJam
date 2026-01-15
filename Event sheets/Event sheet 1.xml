@@ -7,19 +7,6 @@
         <variable constant="0" name="Stamina" sid="180469482041373" static="0" type="number">100</variable>
         <event-group description="" sid="548077862959745" title="Movement">
             <sub-events>
-                <event-block sid="578874103023422">
-                    <conditions>
-                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="355767079061410" type="sp_Mike" />
-                    </conditions>
-                    <actions>
-                        <action id="6" name="Set speed" sid="691443257656304" type="sp_Mike">
-                            <param id="0" name="Speed">0</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="152227384312100" type="sp_Mike">
-                            <param id="0" name="Frame number">0</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="846883294773804">
                     <conditions>
                         <condition id="2" name="Key is down" sid="765779918024763" type="Keyboard">
@@ -198,6 +185,51 @@
                         <condition id="-1" name="Every tick" sid="548793241875105" type="System" />
                     </conditions>
                     <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="700715014743557" title="Egg">
+            <sub-events>
+                <event-block sid="851144909041520">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="707239340172535" type="Keyboard">
+                            <param id="0" name="Key">73</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="391518869443008" type="sp_Mike">
+                            <param id="0" name="Object">sp_egg</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="387217971042514">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="521966848252495" type="sp_egg">
+                            <param id="0" name="Object">sp_chef</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="257440868994002" type="sp_egg" />
+                    </actions>
+                </event-block>
+                <event-block sid="613386972263331">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="399735861436834" type="sp_egg" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="599053864332117" type="sp_egg">
+                            <param id="0" name="Object">sp_eggcrack</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="533944470104599" type="sp_eggcrack">
+                            <param id="0" name="Object">sp_Egglight</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

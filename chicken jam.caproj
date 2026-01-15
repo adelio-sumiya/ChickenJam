@@ -16,7 +16,9 @@
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
     </used-behaviors>
     <used-effects />
@@ -60,17 +62,41 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Up" pingpong="0" repeatcount="1" repeatto="0" sid="754373008128783" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEN\Downloads\mikey depan diam.png">
+                <animation framecount="3" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="754373008128783" speed="5">
+                    <frame duration="1" hotspotX="0.488372" hotspotY="0.484375" original-source="C:\Users\Lyo\Downloads\mikey depan diam.png">
                         <collision-poly>
-                            <point x="0.209302" y="0.296875" />
-                            <point x="0.511628" y="0.015625" />
-                            <point x="0.813953" y="0.296875" />
-                            <point x="0.976744" y="0.5" />
-                            <point x="0.813953" y="0.703125" />
-                            <point x="0.511628" y="0.6875" />
-                            <point x="0.209302" y="0.703125" />
-                            <point x="0.0232558" y="0.5" />
+                            <point x="0.702" y="0.296875" />
+                            <point x="1" y="0.015625" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="0.703125" />
+                            <point x="1" y="0.6875" />
+                            <point x="0.702" y="0.703125" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.488372" hotspotY="0.492063">
+                        <collision-poly>
+                            <point x="0" y="0.31746" />
+                            <point x="0.563548" y="0.031746" />
+                            <point x="1" y="0.015873" />
+                            <point x="1" y="0.52381" />
+                            <point x="1" y="0.730159" />
+                            <point x="0.563548" y="0.714286" />
+                            <point x="0" y="0.730159" />
+                            <point x="0" y="0.52381" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.488372" hotspotY="0.484375" original-source="C:\Users\Lyo\Downloads\mikey depan diam.png">
+                        <collision-poly>
+                            <point x="0" y="0.296875" />
+                            <point x="0" y="0.015625" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="0.703125" />
+                            <point x="0" y="0.6875" />
+                            <point x="0" y="0.703125" />
+                            <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -130,18 +156,112 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="sp_Light" sid="687622045955462">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="438578781698149" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="sp_lighto" sid="580739004669551">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="558036758347764" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Lyo\Downloads\Light.png">
+                        <collision-poly>
+                            <point x="0.296642" y="0.296642" />
+                            <point x="0.5" y="0.214552" />
+                            <point x="0.701493" y="0.298507" />
+                            <point x="0.785448" y="0.5" />
+                            <point x="0.699627" y="0.699627" />
+                            <point x="0.5" y="0.787313" />
+                            <point x="0.298507" y="0.701493" />
+                            <point x="0.212687" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sp_egg" sid="945271505833778">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="576963516740685">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="724965845972476" speed="5">
+                    <frame duration="1" hotspotX="0.491667" hotspotY="0.488889" original-source="C:\Users\Lyo\Downloads\pngtree-fresh-single-egg-png-image_12504967.png">
+                        <collision-poly>
+                            <point x="0.280556" y="0.719444" />
+                            <point x="0.108333" y="0.5" />
+                            <point x="0.283333" y="0.283333" />
+                            <point x="0.5" y="0.227778" />
+                            <point x="0.711111" y="0.288889" />
+                            <point x="0.838889" y="0.5" />
+                            <point x="0.713889" y="0.713889" />
+                            <point x="0.5" y="0.777778" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Cracked" pingpong="0" repeatcount="1" repeatto="0" sid="631224587109909" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502439" original-source="C:\Users\Lyo\Downloads\regg.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sp_eggcrack" sid="318697760143075">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="350457699198291">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="236087916426400" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502439" original-source="C:\Users\Lyo\Downloads\regg.jpg">
+                        <collision-poly>
+                            <point x="0.280556" y="0.280556" />
+                            <point x="0.5" y="0.108333" />
+                            <point x="0.716667" y="0.283333" />
+                            <point x="0.772222" y="0.5" />
+                            <point x="0.711111" y="0.711111" />
+                            <point x="0.5" y="0.838889" />
+                            <point x="0.286111" y="0.713889" />
+                            <point x="0.222222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sp_chef" sid="312111858778716">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="589323872694666" speed="5">
+                    <frame duration="1" hotspotX="0.502674" hotspotY="0.5" original-source="C:\Users\Lyo\Downloads\images222.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sp_Egglight" sid="184429073224668">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="167571337588943">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="203579898483799" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Lyo\Downloads\Light.png">
+                        <collision-poly>
+                            <point x="0.296642" y="0.296642" />
+                            <point x="0.5" y="0.214552" />
+                            <point x="0.701493" y="0.298507" />
+                            <point x="0.785448" y="0.5" />
+                            <point x="0.699627" y="0.699627" />
+                            <point x="0.5" y="0.787313" />
+                            <point x="0.298507" y="0.701493" />
+                            <point x="0.212687" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sp_danger" sid="485009577802103">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="676433050030520" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
