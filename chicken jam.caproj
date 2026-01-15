@@ -13,11 +13,11 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -48,47 +48,29 @@
     <object-folder>
         <object-type name="sp_Mike" sid="391283402145411">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="IsExhausted" sid="190640663785463" type="boolean" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="785608856066238">
                     <behavior id="EightDir" />
                 </behavior-type>
+                <behavior-type name="Timer" sid="997424960499274">
+                    <behavior id="Timer" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="3" loop="0" name="Up" pingpong="0" repeatcount="1" repeatto="0" sid="754373008128783" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEN\Downloads\png.png">
+                <animation framecount="1" loop="0" name="Up" pingpong="0" repeatcount="1" repeatto="0" sid="754373008128783" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\OMEN\Downloads\mikey depan diam.png">
                         <collision-poly>
-                            <point x="0.688372" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="0.903614" />
-                            <point x="0.246511" y="0" />
-                            <point x="0.27907" y="0" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.478673" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="0" />
-                            <point x="0.478673" y="0.894273" />
-                            <point x="0" y="0" />
-                            <point x="0" y="0" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0" y="0" />
-                            <point x="0.764706" y="0" />
-                            <point x="0.764706" y="0" />
-                            <point x="0.748662" y="0" />
-                            <point x="0" y="0.890411" />
-                            <point x="0" y="0" />
-                            <point x="0" y="0" />
+                            <point x="0.209302" y="0.296875" />
+                            <point x="0.511628" y="0.015625" />
+                            <point x="0.813953" y="0.296875" />
+                            <point x="0.976744" y="0.5" />
+                            <point x="0.813953" y="0.703125" />
+                            <point x="0.511628" y="0.6875" />
+                            <point x="0.209302" y="0.703125" />
+                            <point x="0.0232558" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -99,22 +81,46 @@
         </object-type>
         <object-type name="Tilemap" sid="983830977740380">
             <plugin id="Tilemap" />
-            <texture original-source="C:\Users\OMEN\Downloads\tilemap_construct2_32.png" />
-            <tiles />
+            <texture original-source="C:\Users\OMEN\Downloads\tilemap mencekam.png" />
+            <tiles>
+                <tile id="198">
+                    <collision-poly>
+                        <point x="0" y="0" />
+                        <point x="1" y="0" />
+                        <point x="1" y="1" />
+                        <point x="0" y="0.78125" />
+                    </collision-poly>
+                </tile>
+                <tile id="1450">
+                    <collision-poly>
+                        <point x="0.015625" y="0.15625" />
+                        <point x="0.984375" y="0.1875" />
+                        <point x="0.953125" y="0.859375" />
+                        <point x="0.125" y="0.859375" />
+                    </collision-poly>
+                </tile>
+                <tile id="1451">
+                    <collision-poly>
+                        <point x="0" y="0.117188" />
+                        <point x="1" y="0.117188" />
+                        <point x="1" y="1" />
+                        <point x="0.257813" y="1" />
+                        <point x="0.25" y="0.876953" />
+                        <point x="0" y="0.878906" />
+                    </collision-poly>
+                </tile>
+                <tile id="1497">
+                    <collision-poly>
+                        <point x="0" y="0" />
+                        <point x="0.695313" y="0.00390625" />
+                        <point x="0.695313" y="0.984375" />
+                        <point x="0" y="1" />
+                    </collision-poly>
+                </tile>
+            </tiles>
         </object-type>
         <object-type name="txt_stamina" sid="412159063336272">
             <plugin id="Text" />
-            <container>
-                <type>TextBox</type>
-                <type>txt_stamina</type>
-            </container>
-        </object-type>
-        <object-type name="TextBox" sid="107878441503114">
-            <plugin id="TextBox" />
-            <container>
-                <type>TextBox</type>
-                <type>txt_stamina</type>
-            </container>
         </object-type>
     </object-folder>
     <families />

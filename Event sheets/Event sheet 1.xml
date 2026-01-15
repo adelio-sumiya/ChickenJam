@@ -3,7 +3,23 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="StaminaCounter" sid="247654581644882" static="0" type="text">0</variable>
         <variable constant="0" name="Stamina" sid="180469482041373" static="0" type="number">100</variable>
+        <event-block sid="603289759724993">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="420045593043768" type="System" />
+                <condition id="-1" name="Every tick" sid="143279307608186" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="324896982558109" type="txt_stamina">
+                    <param id="0" name="Text">&quot;&quot;&amp;Stamina</param>
+                </action>
+                <action id="-9" name="Set value" sid="255328905810496" type="System">
+                    <param id="0" name="Variable">Stamina</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="846883294773804">
             <conditions>
                 <condition id="2" name="Key is down" sid="765779918024763" type="Keyboard">
@@ -80,38 +96,85 @@
                 <condition id="2" name="Key is down" sid="548483389074786" type="Keyboard">
                     <param id="0" name="Key">16</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="699305270501815" type="System">
+                    <param id="0" name="Variable">Stamina</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="812552883262616" type="sp_Mike">
+                    <param id="0" name="Instance variable">IsExhausted</param>
+                </condition>
             </conditions>
             <actions>
                 <action behavior="8Direction" id="4" name="Set max speed" sid="450194330727402" type="sp_Mike">
                     <param id="0" name="Max Speed">200</param>
                 </action>
-                <action id="-11" name="Subtract from" sid="934192978364277" type="System">
+                <action id="-11" name="Subtract from" sid="582525732906109" type="System">
                     <param id="0" name="Variable">Stamina</param>
-                    <param id="1" name="Value">5</param>
+                    <param id="1" name="Value">10 * dt</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="304694609680885">
             <conditions>
-                <condition id="-22" name="Else" sid="948892818921539" type="System" />
+                <condition id="-14" name="Compare variable" sid="737631054494633" type="System">
+                    <param id="0" name="Variable">Stamina</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="124071026431605" type="sp_Mike">
+                    <param id="0" name="Instance variable">IsExhausted</param>
+                </condition>
             </conditions>
             <actions>
-                <action behavior="8Direction" id="4" name="Set max speed" sid="577948558394189" type="sp_Mike">
-                    <param id="0" name="Max Speed">100</param>
+                <action id="-13" name="Set boolean" sid="941329830670311" type="sp_Mike">
+                    <param id="0" name="Instance variable">IsExhausted</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="8Direction" id="4" name="Set max speed" sid="600276085194627" type="sp_Mike">
+                    <param id="0" name="Max Speed">50</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="664738708867387" type="sp_Mike">
+                    <param id="0" name="Duration">3</param>
+                    <param id="1" name="Type">1</param>
+                    <param id="2" name="Tag">&quot;Recover&quot;</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="123544084623922">
             <conditions>
-                <condition id="-14" name="Compare variable" sid="268505166301809" type="System">
-                    <param id="0" name="Variable">Stamina</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
+                <condition behavior="Timer" id="0" name="On timer" sid="268505166301809" type="sp_Mike">
+                    <param id="0" name="Tag">&quot;Recover&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="8Direction" id="4" name="Set max speed" sid="600276085194627" type="sp_Mike">
-                    <param id="0" name="Max Speed">50</param>
+                <action behavior="8Direction" id="4" name="Set max speed" sid="577948558394189" type="sp_Mike">
+                    <param id="0" name="Max Speed">100</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="529716584827003" type="sp_Mike">
+                    <param id="0" name="Instance variable">IsExhausted</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="678898283035599">
+            <conditions>
+                <condition id="2" inverted="1" name="Key is down" sid="814762731608090" type="Keyboard">
+                    <param id="0" name="Key">16</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="775971667393134" type="sp_Mike">
+                    <param id="0" name="Instance variable">IsExhausted</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="658728330283525" type="System">
+                    <param id="0" name="Variable">Stamina</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="934192978364277" type="System">
+                    <param id="0" name="Variable">Stamina</param>
+                    <param id="1" name="Value">-5 * dt</param>
                 </action>
             </actions>
         </event-block>
