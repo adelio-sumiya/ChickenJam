@@ -233,5 +233,125 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="390583987113139" title="Chef" />
+        <event-block sid="594416575355962">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="381049550769781" type="sp_chef">
+                    <param id="0" name="Object">sp_Mike</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="426996811475977" type="sp_chef">
+                    <param id="0" name="Instance variable">State</param>
+                    <param id="1" name="Value">&quot;Chase&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="891974634715633">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="646367667167472" type="sp_chef">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Chase&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="553142382462874">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="497109032134355" type="System">
+                                    <param id="0" name="Interval (seconds)">0.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="915013211177736" type="sp_chef">
+                                    <param id="0" name="X">sp_Mike.X</param>
+                                    <param id="1" name="Y">sp_Mike.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="850563818242928">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="115537282881835" type="sp_chef">
+                    <param id="0" name="Object">sp_Mike</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="718847716384845" type="sp_chef">
+                    <param id="0" name="Instance variable">State</param>
+                    <param id="1" name="Value">&quot;Patrol&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="895691076713742">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="323723803320181" type="sp_chef">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Patrol&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="658690606089809">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="141702535441405" type="System">
+                                    <param id="0" name="Interval (seconds)">1.0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="156532424411354" type="obj_waypoint">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">sp_chef.TargetNode</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="586477688892629" type="sp_chef">
+                                    <param id="0" name="X">obj_waypoint.X</param>
+                                    <param id="1" name="Y">obj_waypoint.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="539656615305378">
+                            <conditions>
+                                <condition behavior="Pathfinding" id="5" name="On arrived" sid="967849964082611" type="sp_chef" />
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="274538282517666" type="sp_chef">
+                                    <param id="0" name="Instance variable">TargetNode</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="645149244534673">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="772832007682528" type="sp_chef">
+                                    <param id="0" name="Instance variable">TargetNode</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="433924637454014" type="sp_chef">
+                                    <param id="0" name="Instance variable">TargetNode</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="915143625650260">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="952593030947435" type="sp_chef" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="469472524993782" type="sp_chef" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
