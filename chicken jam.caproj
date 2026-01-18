@@ -11,6 +11,7 @@
     <saved-with-version>28000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
@@ -343,7 +344,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="589323872694666" speed="5">
-                    <frame duration="1" hotspotX="0.502674" hotspotY="0.5" original-source="C:\Users\Lyo\Downloads\images222.jpg" />
+                    <frame duration="1" hotspotX="0.502793" hotspotY="0.5" original-source="C:\Users\lio\Downloads\Screenshot 2026-01-18 211658.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -395,16 +396,22 @@
             <texture original-source="C:\Users\OMEN\Pictures\Tileset Pabrik Jagal.png" />
             <tiles />
         </object-type>
+        <object-type name="Mouse" sid="664290124723445">
+            <plugin id="Mouse" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Level 1.xml</layout>
+        <layout>asset.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Event sheet 2.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />
+        <global-instance type="Mouse" uid="13" />
     </global-instances>
     <sounds-folder />
     <music-folder />

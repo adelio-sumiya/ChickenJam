@@ -4,11 +4,11 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>454.739</position-x>
-        <position-y>495.132</position-y>
-        <position-z>38.8187</position-z>
-        <lookat-x>454.739</lookat-x>
-        <lookat-y>495.132</lookat-y>
+        <position-x>450</position-x>
+        <position-y>371.928</position-y>
+        <position-z>94.7722</position-z>
+        <lookat-x>450</lookat-x>
+        <lookat-y>371.928</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>0</snap-to-grid>

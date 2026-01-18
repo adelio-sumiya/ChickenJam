@@ -202,9 +202,13 @@
         </event-group>
         <event-group description="" sid="700715014743557" title="Egg">
             <sub-events>
-                <event-block sid="851144909041520">
+                <event-block any="1" sid="851144909041520">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="707239340172535" type="Keyboard">
+                        <condition id="0" name="On click" sid="707239340172535" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="201434496522358" type="Keyboard">
                             <param id="0" name="Key">73</param>
                         </condition>
                     </conditions>
@@ -215,54 +219,164 @@
                             <param id="2" name="Image point">0</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="552228665074111">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="306465518427385" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-22" name="Set angle toward position" sid="151922852919034" type="sp_egg">
+                                    <param id="0" name="X">Mouse.X</param>
+                                    <param id="1" name="Y">mouse.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="387217971042514">
+                <event-block any="1" sid="613386972263331">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="521966848252495" type="sp_egg">
+                        <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="200851440660670" type="sp_egg">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Distance">120</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="373073210981323" type="sp_egg">
                             <param id="0" name="Object">sp_chef</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="257440868994002" type="sp_egg" />
-                    </actions>
-                </event-block>
-                <event-block sid="613386972263331">
-                    <conditions>
-                        <condition id="-19" name="On destroyed" sid="399735861436834" type="sp_egg" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="599053864332117" type="sp_egg">
+                        <action id="-9" name="Destroy" sid="669154563099536" type="sp_egg" />
+                        <action id="0" name="Spawn another object" sid="131492884303098" type="sp_egg">
                             <param id="0" name="Object">sp_eggcrack</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="533944470104599" type="sp_eggcrack">
+                        <action id="0" name="Spawn another object" sid="837126347814137" type="sp_eggcrack">
                             <param id="0" name="Object">sp_Egglight</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="978511029632479">
-                    <conditions>
-                        <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="200851440660670" type="sp_egg">
-                            <param id="0" name="Comparison">5</param>
-                            <param id="1" name="Distance">80</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="669154563099536" type="sp_egg" />
-                    </actions>
-                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="390583987113139" title="Chef">
             <sub-events>
+                <event-block sid="915143625650260">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="952593030947435" type="sp_chef" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="469472524993782" type="sp_chef" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="214479323697509">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="746713743424717" type="sp_chef">
+                    <param id="0" name="Instance variable">State</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Patrol&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="532331915794720">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="480338118124808" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="723918122235694" type="obj_waypoint">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">sp_chef.TargetNode</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="358465227087500" type="sp_chef">
+                            <param id="0" name="X">obj_waypoint.X</param>
+                            <param id="1" name="Y">obj_waypoint.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="722663807487910">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="466155984906639" type="sp_chef" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="407090854486663" type="sp_chef">
+                            <param id="0" name="Instance variable">TargetNode</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="684277829951481">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="209266390269772" type="sp_chef">
+                            <param id="0" name="Instance variable">TargetNode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="964648706796338" type="sp_chef">
+                            <param id="0" name="Instance variable">TargetNode</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="485221329172801">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="241195351012022" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="133513388862873">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="399270670012000" type="sp_eggcrack" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="605521938135840" type="sp_chef">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">&quot;Egg&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="298082986789607">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="186107095081457" type="sp_chef">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Egg&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="165616385746763">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="622990933755166" type="System">
+                                            <param id="0" name="Interval (seconds)">0.5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Pathfinding" id="0" name="Find path" sid="749226701122570" type="sp_chef">
+                                            <param id="0" name="X">sp_eggcrack.X</param>
+                                            <param id="1" name="Y">sp_eggcrack.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="594416575355962">
                     <conditions>
                         <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="381049550769781" type="sp_chef">
                             <param id="0" name="Object">sp_Mike</param>
                         </condition>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="585191397612889" type="sp_eggcrack" />
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="426996811475977" type="sp_chef">
@@ -271,9 +385,9 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="891974634715633">
+                        <event-block sid="532509929745763">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="646367667167472" type="sp_chef">
+                                <condition id="-7" name="Compare instance variable" sid="221477489099877" type="sp_chef">
                                     <param id="0" name="Instance variable">State</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Chase&quot;</param>
@@ -281,7 +395,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="553142382462874">
+                                <event-block sid="891974634715633">
                                     <conditions>
                                         <condition id="-6" name="Every X seconds" sid="497109032134355" type="System">
                                             <param id="0" name="Interval (seconds)">0.5</param>
@@ -303,6 +417,7 @@
                         <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="115537282881835" type="sp_chef">
                             <param id="0" name="Object">sp_Mike</param>
                         </condition>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="832377249158510" type="sp_eggcrack" />
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="718847716384845" type="sp_chef">
@@ -369,15 +484,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="915143625650260">
-                    <conditions>
-                        <condition behavior="Pathfinding" id="0" name="On path found" sid="952593030947435" type="sp_chef" />
-                    </conditions>
-                    <actions>
-                        <action behavior="Pathfinding" id="1" name="Move along path" sid="469472524993782" type="sp_chef" />
-                    </actions>
-                </event-block>
             </sub-events>
-        </event-group>
+        </event-block>
     </events>
 </c2eventsheet>
