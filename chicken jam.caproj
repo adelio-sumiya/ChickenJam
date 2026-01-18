@@ -22,7 +22,6 @@
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
-        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -65,32 +64,18 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="3" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="754373008128783" speed="5">
-                    <frame duration="1" hotspotX="0.488372" hotspotY="0.484375" original-source="C:\Users\Lyo\Downloads\mikey depan diam.png">
+                <animation framecount="4" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="754373008128783" speed="5">
+                    <frame duration="1" hotspotX="0.521739" hotspotY="0.484375" original-source="C:\Users\OMEN\Downloads\mikey.png">
                         <collision-poly>
-                            <point x="0.702" y="0.296875" />
-                            <point x="1" y="0.015625" />
-                            <point x="1" y="0" />
+                            <point x="0" y="0.296875" />
+                            <point x="1" y="0.265625" />
                             <point x="1" y="0.5" />
                             <point x="1" y="0.703125" />
-                            <point x="1" y="0.6875" />
-                            <point x="0.702" y="0.703125" />
+                            <point x="0" y="0.703125" />
                             <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.488372" hotspotY="0.492063">
-                        <collision-poly>
-                            <point x="0" y="0.31746" />
-                            <point x="0.563548" y="0.031746" />
-                            <point x="1" y="0.015873" />
-                            <point x="1" y="0.52381" />
-                            <point x="1" y="0.730159" />
-                            <point x="0.563548" y="0.714286" />
-                            <point x="0" y="0.730159" />
-                            <point x="0" y="0.52381" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.488372" hotspotY="0.484375" original-source="C:\Users\Lyo\Downloads\mikey depan diam.png">
+                    <frame duration="1" hotspotX="0.521739" hotspotY="0.484375" original-source="C:\Users\OMEN\Downloads\mikey.png">
                         <collision-poly>
                             <point x="0" y="0.296875" />
                             <point x="0" y="0.015625" />
@@ -102,56 +87,161 @@
                             <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
+                    <frame duration="1" hotspotX="0.55814" hotspotY="0.484375" original-source="C:\Users\OMEN\Downloads\mikey.png">
+                        <collision-poly>
+                            <point x="1" y="0.296875" />
+                            <point x="1" y="0.015625" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="0.703125" />
+                            <point x="1" y="0.6875" />
+                            <point x="1" y="0.703125" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.510638" hotspotY="0.484375" original-source="C:\Users\OMEN\Downloads\mikey.png">
+                        <collision-poly>
+                            <point x="0" y="0.31746" />
+                            <point x="1" y="0.031746" />
+                            <point x="1" y="0.015873" />
+                            <point x="1" y="0.52381" />
+                            <point x="1" y="0.730159" />
+                            <point x="1" y="0.714286" />
+                            <point x="0" y="0.730159" />
+                            <point x="0" y="0.52381" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="Atas" pingpong="0" repeatcount="1" repeatto="0" sid="978915121808789" speed="5">
+                    <frame duration="1" hotspotX="0.510638" hotspotY="0.484375" original-source="C:\Users\OMEN\Downloads\mikey.png">
+                        <collision-poly>
+                            <point x="0" y="0.296875" />
+                            <point x="1" y="0.265625" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="0.703125" />
+                            <point x="0" y="0.703125" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.510638" hotspotY="0.484375">
+                        <collision-poly>
+                            <point x="0" y="0.296875" />
+                            <point x="1" y="0.265625" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="0.703125" />
+                            <point x="0" y="0.703125" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.55814" hotspotY="0.484375">
+                        <collision-poly>
+                            <point x="0" y="0.296875" />
+                            <point x="1" y="0.265625" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="0.703125" />
+                            <point x="0" y="0.703125" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.55814" hotspotY="0.484375">
+                        <collision-poly>
+                            <point x="0" y="0.296875" />
+                            <point x="0.837209" y="0.265625" />
+                            <point x="0.976744" y="0.5" />
+                            <point x="0.790698" y="0.703125" />
+                            <point x="0" y="0.703125" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="Kanan" pingpong="0" repeatcount="1" repeatto="0" sid="762954109172023" speed="5">
+                    <frame duration="1" hotspotX="0.553571" hotspotY="0.47541" original-source="C:\Users\OMEN\Downloads\mikey.png">
+                        <collision-poly>
+                            <point x="0" y="0.326794" />
+                            <point x="1" y="0.292395" />
+                            <point x="1" y="0.55039" />
+                            <point x="1" y="0.773986" />
+                            <point x="0" y="0.773986" />
+                            <point x="0" y="0.55039" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.553571" hotspotY="0.467742">
+                        <collision-poly>
+                            <point x="0" y="0.306452" />
+                            <point x="1" y="0.274194" />
+                            <point x="1" y="0.516129" />
+                            <point x="1" y="0.725806" />
+                            <point x="0" y="0.725806" />
+                            <point x="0" y="0.516129" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.553571" hotspotY="0.460317">
+                        <collision-poly>
+                            <point x="0" y="0.301587" />
+                            <point x="1" y="0.269841" />
+                            <point x="1" y="0.507937" />
+                            <point x="1" y="0.714286" />
+                            <point x="0" y="0.714286" />
+                            <point x="0" y="0.507937" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.574074" hotspotY="0.47541">
+                        <collision-poly>
+                            <point x="0" y="0.311475" />
+                            <point x="1" y="0.278689" />
+                            <point x="1" y="0.52459" />
+                            <point x="1" y="0.737705" />
+                            <point x="0" y="0.737705" />
+                            <point x="0" y="0.52459" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="Kiri" pingpong="0" repeatcount="1" repeatto="0" sid="748668999359560" speed="5">
+                    <frame duration="1" hotspotX="0.574074" hotspotY="0.47541" original-source="C:\Users\OMEN\Downloads\mikey.png">
+                        <collision-poly>
+                            <point x="0" y="0.320089" />
+                            <point x="1" y="0.284523" />
+                            <point x="1" y="0.551264" />
+                            <point x="1" y="0.78244" />
+                            <point x="0" y="0.78244" />
+                            <point x="0" y="0.551264" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.574074" hotspotY="0.467742">
+                        <collision-poly>
+                            <point x="0" y="0.306452" />
+                            <point x="1" y="0.274194" />
+                            <point x="1" y="0.516129" />
+                            <point x="1" y="0.725806" />
+                            <point x="0" y="0.725806" />
+                            <point x="0" y="0.516129" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.596154" hotspotY="0.467742">
+                        <collision-poly>
+                            <point x="0" y="0.306452" />
+                            <point x="1" y="0.274194" />
+                            <point x="1" y="0.516129" />
+                            <point x="1" y="0.725806" />
+                            <point x="0" y="0.725806" />
+                            <point x="0" y="0.516129" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.574074" hotspotY="0.47541">
+                        <collision-poly>
+                            <point x="0" y="0.311475" />
+                            <point x="1" y="0.278689" />
+                            <point x="1" y="0.52459" />
+                            <point x="1" y="0.737705" />
+                            <point x="0" y="0.737705" />
+                            <point x="0" y="0.52459" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
         <object-type name="Keyboard" sid="636052977033350">
             <plugin id="Keyboard" />
-        </object-type>
-        <object-type name="Tilemap" sid="983830977740380">
-            <plugin id="Tilemap" />
-            <behaviors>
-                <behavior-type name="Solid" sid="350526967425415">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <texture original-source="C:\Users\OMEN\Downloads\tilemap mencekam.png" />
-            <tiles>
-                <tile id="198">
-                    <collision-poly>
-                        <point x="0" y="0" />
-                        <point x="1" y="0" />
-                        <point x="1" y="1" />
-                        <point x="0" y="0.78125" />
-                    </collision-poly>
-                </tile>
-                <tile id="1450">
-                    <collision-poly>
-                        <point x="0.015625" y="0.15625" />
-                        <point x="0.984375" y="0.1875" />
-                        <point x="0.953125" y="0.859375" />
-                        <point x="0.125" y="0.859375" />
-                    </collision-poly>
-                </tile>
-                <tile id="1451">
-                    <collision-poly>
-                        <point x="0" y="0.117188" />
-                        <point x="1" y="0.117188" />
-                        <point x="1" y="1" />
-                        <point x="0.257813" y="1" />
-                        <point x="0.25" y="0.876953" />
-                        <point x="0" y="0.878906" />
-                    </collision-poly>
-                </tile>
-                <tile id="1497">
-                    <collision-poly>
-                        <point x="0" y="0" />
-                        <point x="0.695313" y="0.00390625" />
-                        <point x="0.695313" y="0.984375" />
-                        <point x="0" y="1" />
-                    </collision-poly>
-                </tile>
-            </tiles>
         </object-type>
         <object-type name="txt_stamina" sid="412159063336272">
             <plugin id="Text" />
@@ -299,6 +389,11 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Tilemap2" sid="960434424343505">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\OMEN\Pictures\Tileset Pabrik Jagal.png" />
+            <tiles />
         </object-type>
     </object-folder>
     <families />
