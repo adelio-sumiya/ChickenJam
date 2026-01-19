@@ -500,15 +500,20 @@
                 <action id="-9" name="Destroy" sid="976368764921894" type="obj_Fuse" />
             </actions>
         </event-block>
-        <event-block sid="242492897019129">
+        <event-block sid="597336458257735">
             <conditions>
-                <condition id="-14" name="Compare variable" sid="723286696677915" type="System">
+                <condition id="-14" name="Compare variable" sid="986588704249286" type="System">
                     <param id="0" name="Variable">Fuses_Collected</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">3</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="-13" name="Set boolean" sid="459334046505622" type="obj_Switch">
+                    <param id="0" name="Instance variable">Ready</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="472648103407034">
             <conditions>
@@ -523,21 +528,6 @@
                 <action id="4" name="Set animation" sid="623720435103151" type="obj_Switch">
                     <param id="0" name="Animation">&quot;On&quot;</param>
                     <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="597336458257735">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="986588704249286" type="System">
-                    <param id="0" name="Variable">Fuses_Collected</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">3</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-13" name="Set boolean" sid="459334046505622" type="obj_Switch">
-                    <param id="0" name="Instance variable">Ready</param>
-                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>

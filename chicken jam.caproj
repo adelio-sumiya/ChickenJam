@@ -26,6 +26,7 @@
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -65,6 +66,9 @@
                 </behavior-type>
                 <behavior-type name="Timer" sid="997424960499274">
                     <behavior id="Timer" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="821993118801925">
+                    <behavior id="scrollto" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -512,6 +516,16 @@
         <object-type name="Particles2" sid="747058451594683">
             <plugin id="Particles" />
             <texture />
+        </object-type>
+        <object-type name="TIlemapWall" sid="393295423363326">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="939932698714133">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\OMEN\Pictures\Tileset Pabrik Jagal.png" />
+            <tiles />
         </object-type>
     </object-folder>
     <families />
