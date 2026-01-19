@@ -10,6 +10,7 @@
     <unique-id>azsvp93b42pc</unique-id>
     <saved-with-version>28000</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -283,21 +284,29 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="724965845972476" speed="5">
-                    <frame duration="1" hotspotX="0.491667" hotspotY="0.488889" original-source="C:\Users\Lyo\Downloads\pngtree-fresh-single-egg-png-image_12504967.png">
+                    <frame duration="1" hotspotX="0.489177" hotspotY="0.477157" original-source="C:\Users\lio\Downloads\sprite telur.png">
                         <collision-poly>
-                            <point x="0.280556" y="0.719444" />
-                            <point x="0.108333" y="0.5" />
-                            <point x="0.283333" y="0.283333" />
-                            <point x="0.5" y="0.227778" />
-                            <point x="0.711111" y="0.288889" />
-                            <point x="0.838889" y="0.5" />
-                            <point x="0.713889" y="0.713889" />
-                            <point x="0.5" y="0.777778" />
+                            <point x="1" y="1" />
+                            <point x="0.606061" y="1" />
+                            <point x="0.004329" y="1" />
+                            <point x="0.004329" y="0" />
+                            <point x="0.004329" y="0" />
+                            <point x="0.606061" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Cracked" pingpong="0" repeatcount="1" repeatto="0" sid="631224587109909" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.502439" original-source="C:\Users\Lyo\Downloads\regg.jpg" />
+                    <frame duration="1" hotspotX="0.538298" hotspotY="0.498507" original-source="C:\Users\lio\Downloads\sprite telur.png">
+                        <collision-poly>
+                            <point x="0" y="0.564179" />
+                            <point x="0.659574" y="0.450746" />
+                            <point x="0.776596" y="0.549254" />
+                            <point x="0.729787" y="0.746269" />
+                            <point x="0" y="0.534328" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -310,16 +319,16 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="236087916426400" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.502439" original-source="C:\Users\Lyo\Downloads\regg.jpg">
+                    <frame duration="1" hotspotX="0.458974" hotspotY="0.434109" original-source="C:\Users\lio\Downloads\sprite telur.png">
                         <collision-poly>
-                            <point x="0.280556" y="0.280556" />
-                            <point x="0.5" y="0.108333" />
-                            <point x="0.716667" y="0.283333" />
-                            <point x="0.772222" y="0.5" />
-                            <point x="0.711111" y="0.711111" />
-                            <point x="0.5" y="0.838889" />
-                            <point x="0.286111" y="0.713889" />
-                            <point x="0.222222" y="0.5" />
+                            <point x="0" y="0.00258398" />
+                            <point x="0" y="0.00258398" />
+                            <point x="0.702053" y="0.00258398" />
+                            <point x="0.920854" y="0.483204" />
+                            <point x="0.68017" y="0.997416" />
+                            <point x="0" y="0.997416" />
+                            <point x="0" y="0.997416" />
+                            <point x="0" y="0.483204" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -344,7 +353,16 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="589323872694666" speed="5">
-                    <frame duration="1" hotspotX="0.502793" hotspotY="0.5" original-source="C:\Users\lio\Downloads\Screenshot 2026-01-18 211658.png" />
+                    <frame duration="1" hotspotX="0.522388" hotspotY="0.481928" original-source="C:\Users\lio\Downloads\jagal.png">
+                        <collision-poly>
+                            <point x="0.223881" y="0.156627" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.493976" />
+                            <point x="1" y="0.987952" />
+                            <point x="0.253731" y="0.807229" />
+                            <point x="0.0597015" y="0.493976" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -402,15 +420,97 @@
         <object-type name="Text_Debug" sid="615189040359332">
             <plugin id="Text" />
         </object-type>
+        <object-type name="obj_Switch" sid="120627373442206">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Ready" sid="793021322516415" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Off" pingpong="0" repeatcount="1" repeatto="0" sid="205802205791864" speed="5">
+                    <frame duration="1" hotspotX="1.1092" hotspotY="0.572993" original-source="C:\Users\lio\Downloads\pngtree-vector-lever-switch-illustration-bezel-design-vector-png-image_5522414.png">
+                        <collision-poly>
+                            <point x="0.0747126" y="0.0218978" />
+                            <point x="1" y="1" />
+                            <point x="1" y="0.175182" />
+                            <point x="1" y="0.572993" />
+                            <point x="1" y="0.989051" />
+                            <point x="1" y="1" />
+                            <point x="0.408046" y="0.912409" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="On" pingpong="0" repeatcount="1" repeatto="0" sid="337399018701423" speed="5">
+                    <frame duration="1" hotspotX="0.0228571" hotspotY="0.405109" original-source="C:\Users\lio\Downloads\pngtree-vector-lever-switch-illustration-bezel-design-vector-png-image_5522414.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.0228571" y="0.854015" />
+                            <point x="0.811429" y="0.00729927" />
+                            <point x="0.988571" y="0.405109" />
+                            <point x="0.84" y="0.821168" />
+                            <point x="0.0228571" y="0.937956" />
+                            <point x="0" y="0.744526" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="obj_Fuse" sid="823848205912663">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="202591423606162" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.515873" original-source="C:\Users\lio\Downloads\pngtree-transparent-electrical-fuse-for-circuit-protection-displayed-against-a-white-backdrop-png-image_14499634.png">
+                        <collision-poly>
+                            <point x="0.389706" y="0.396825" />
+                            <point x="0.5" y="0.297619" />
+                            <point x="0.908088" y="0.0753968" />
+                            <point x="0.691176" y="0.515873" />
+                            <point x="0.5" y="0.698413" />
+                            <point x="0.106618" y="0.940476" />
+                            <point x="0.205882" y="0.515873" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="obj_Exit" sid="574652859907690">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="658083400473490" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\lio\Downloads\pngtree-closed-wooden-door-design-vector-png-image_6471174.png">
+                        <collision-poly>
+                            <point x="0.213889" y="0.213889" />
+                            <point x="0.5" y="0.0222222" />
+                            <point x="0.786111" y="0.213889" />
+                            <point x="0.786111" y="0.786111" />
+                            <point x="0.5" y="0.961111" />
+                            <point x="0.213889" y="0.786111" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bt_Play" sid="919920000232399">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="SplashScreen" sid="307379694968541">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="bt_L1" sid="460858009741586">
+            <plugin id="Button" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
+        <layout>Level Select.xml</layout>
+        <layout>Main Menu.xml</layout>
         <layout>Level 1.xml</layout>
         <layout>asset.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
-        <event-sheet>Event sheet 2.xml</event-sheet>
+        <event-sheet>es_Asset.xml</event-sheet>
+        <event-sheet>es_MainMenu.xml</event-sheet>
+        <event-sheet>es_LevelSelect.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>es_LevelSelect</name>
+    <events>
+        <event-block sid="911736740434262">
+            <conditions>
+                <condition id="0" name="On clicked" sid="922752055618351" type="bt_L1" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="118164612904043" type="System">
+                    <param id="0" name="Layout">Level 1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
