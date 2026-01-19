@@ -328,8 +328,8 @@
                         <width>41.14617157</width>
                         <height>64.793395996</height>
                         <depth>0</depth>
-                        <hotspotX>1.109195352</hotspotX>
-                        <hotspotY>0.572992682</hotspotY>
+                        <hotspotX>0.586206913</hotspotX>
+                        <hotspotY>0.56934309</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -443,6 +443,13 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -459,24 +466,6 @@
                     </world>
                 </instance>
             </instances>
-            <effects />
-        </layer>
-        <layer name="Vignette" sid="849643789599423">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances />
             <effects />
         </layer>
     </layers>

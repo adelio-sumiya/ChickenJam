@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
@@ -24,6 +25,7 @@
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -392,9 +394,14 @@
         </object-type>
         <object-type name="sp_danger" sid="485009577802103">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="930968904020178">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="676433050030520" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\lio\Downloads\abstract-luxury-soft-red-background-christmas-valentines-layout-designstudioroom-web-template-business-report-with-smooth-circle-gradient-color (1) (1).jpg" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -427,7 +434,7 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Off" pingpong="0" repeatcount="1" repeatto="0" sid="205802205791864" speed="5">
-                    <frame duration="1" hotspotX="1.1092" hotspotY="0.572993" original-source="C:\Users\lio\Downloads\pngtree-vector-lever-switch-illustration-bezel-design-vector-png-image_5522414.png">
+                    <frame duration="1" hotspotX="0.586207" hotspotY="0.569343" original-source="C:\Users\lio\Downloads\pngtree-vector-lever-switch-illustration-bezel-design-vector-png-image_5522414.png">
                         <collision-poly>
                             <point x="0.0747126" y="0.0218978" />
                             <point x="1" y="1" />
@@ -440,7 +447,7 @@
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="On" pingpong="0" repeatcount="1" repeatto="0" sid="337399018701423" speed="5">
-                    <frame duration="1" hotspotX="0.0228571" hotspotY="0.405109" original-source="C:\Users\lio\Downloads\pngtree-vector-lever-switch-illustration-bezel-design-vector-png-image_5522414.png">
+                    <frame duration="1" hotspotX="0.628571" hotspotY="0.434307" original-source="C:\Users\lio\Downloads\pngtree-vector-lever-switch-illustration-bezel-design-vector-png-image_5522414.png">
                         <collision-poly>
                             <point x="0" y="0" />
                             <point x="0.0228571" y="0.854015" />
@@ -498,12 +505,22 @@
         <object-type name="bt_L1" sid="460858009741586">
             <plugin id="Button" />
         </object-type>
+        <object-type name="Particles" sid="647785638468134">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="Particles2" sid="747058451594683">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Level Select.xml</layout>
         <layout>Main Menu.xml</layout>
         <layout>Level 1.xml</layout>
+        <layout>Level 2.xml</layout>
+        <layout>Level 3.xml</layout>
         <layout>asset.xml</layout>
     </layout-folder>
     <event-folder>

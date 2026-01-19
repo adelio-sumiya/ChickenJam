@@ -219,9 +219,27 @@
                     </conditions>
                     <actions>
                         <action id="-16" name="Set opacity" sid="912367555994988" type="sp_danger">
-                            <param id="0" name="Opacity">clamp(100 - (distance(sp_chef.X, sp_chef.Y, sp_Mike.X, sp_Mike.Y) / 5), 0, 100)</param>
+                            <param id="0" name="Opacity">clamp(100 - (distance(sp_chef.X, sp_chef.Y, sp_Mike.X, sp_Mike.Y) / 2), 0, 75)</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="693636750031527">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="729494949584756" type="System">
+                                    <param id="0" name="First value">distance(sp_chef.X, sp_chef.Y, sp_Mike.X, sp_Mike.Y)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">150</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="766037890973257" type="sp_danger">
+                                    <param id="0" name="Magnitude">1.5</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -494,7 +512,7 @@
         </event-block>
         <event-block sid="472648103407034">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="407031738892802" type="sp_Mike">
+                <condition id="1" name="Is overlapping another object" sid="407031738892802" type="sp_eggcrack">
                     <param id="0" name="Object">obj_Switch</param>
                 </condition>
                 <condition id="-8" name="Is boolean instance variable set" sid="187950625182889" type="obj_Switch">
