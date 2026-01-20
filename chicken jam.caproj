@@ -10,6 +10,7 @@
     <unique-id>azsvp93b42pc</unique-id>
     <saved-with-version>28000</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
@@ -24,6 +25,7 @@
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -74,16 +76,18 @@
             <animation-folder>
                 <animation framecount="4" loop="0" name="Bawa" pingpong="0" repeatcount="1" repeatto="0" sid="754373008128783" speed="5">
                     <frame duration="1" hotspotX="0.521739" hotspotY="0.484375" original-source="C:\Users\OMEN\Downloads\mikey.png">
+                        <image-point name="Imagepoint 1" x="0.521739" y="0.1875" />
                         <collision-poly>
-                            <point x="0" y="0.296875" />
-                            <point x="1" y="0.265625" />
+                            <point x="0.418478" y="0.00390625" />
+                            <point x="0.646738" y="0" />
                             <point x="1" y="0.5" />
-                            <point x="1" y="0.703125" />
-                            <point x="0" y="0.703125" />
+                            <point x="0.760869" y="0.996094" />
+                            <point x="0.233696" y="0.992188" />
                             <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.521739" hotspotY="0.484375" original-source="C:\Users\OMEN\Downloads\mikey.png">
+                        <image-point name="Imagepoint 1" x="0.543478" y="0.21875" />
                         <collision-poly>
                             <point x="0" y="0.296875" />
                             <point x="0" y="0.015625" />
@@ -95,7 +99,8 @@
                             <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.55814" hotspotY="0.484375" original-source="C:\Users\OMEN\Downloads\mikey.png">
+                    <frame duration="1" hotspotX="0.511628" hotspotY="0.5" original-source="C:\Users\OMEN\Downloads\mikey.png">
+                        <image-point name="Imagepoint 1" x="0.488372" y="0.234375" />
                         <collision-poly>
                             <point x="1" y="0.296875" />
                             <point x="1" y="0.015625" />
@@ -107,7 +112,7 @@
                             <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.510638" hotspotY="0.484375" original-source="C:\Users\OMEN\Downloads\mikey.png">
+                    <frame duration="1" hotspotX="0.531915" hotspotY="0.203125" original-source="C:\Users\OMEN\Downloads\mikey.png">
                         <collision-poly>
                             <point x="0" y="0.31746" />
                             <point x="1" y="0.031746" />
@@ -122,6 +127,7 @@
                 </animation>
                 <animation framecount="4" loop="0" name="Atas" pingpong="0" repeatcount="1" repeatto="0" sid="978915121808789" speed="5">
                     <frame duration="1" hotspotX="0.510638" hotspotY="0.484375" original-source="C:\Users\OMEN\Downloads\mikey.png">
+                        <image-point name="Imagepoint 1" x="0.510638" y="0.125" />
                         <collision-poly>
                             <point x="0" y="0.296875" />
                             <point x="1" y="0.265625" />
@@ -132,6 +138,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.510638" hotspotY="0.484375">
+                        <image-point name="Imagepoint 1" x="0.510638" y="0.171875" />
                         <collision-poly>
                             <point x="0" y="0.296875" />
                             <point x="1" y="0.265625" />
@@ -141,7 +148,8 @@
                             <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.55814" hotspotY="0.484375">
+                    <frame duration="1" hotspotX="0.511628" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.488372" y="0.125" />
                         <collision-poly>
                             <point x="0" y="0.296875" />
                             <point x="1" y="0.265625" />
@@ -151,7 +159,8 @@
                             <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.55814" hotspotY="0.484375">
+                    <frame duration="1" hotspotX="0.511628" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.511628" y="0.1875" />
                         <collision-poly>
                             <point x="0" y="0.296875" />
                             <point x="0.837209" y="0.265625" />
@@ -163,7 +172,8 @@
                     </frame>
                 </animation>
                 <animation framecount="4" loop="0" name="Kanan" pingpong="0" repeatcount="1" repeatto="0" sid="762954109172023" speed="5">
-                    <frame duration="1" hotspotX="0.553571" hotspotY="0.47541" original-source="C:\Users\OMEN\Downloads\mikey.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508197" original-source="C:\Users\OMEN\Downloads\mikey.png">
+                        <image-point name="Imagepoint 1" x="0.821429" y="0.229508" />
                         <collision-poly>
                             <point x="0" y="0.326794" />
                             <point x="1" y="0.292395" />
@@ -174,6 +184,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.553571" hotspotY="0.467742">
+                        <image-point name="Imagepoint 1" x="0.803571" y="0.241935" />
                         <collision-poly>
                             <point x="0" y="0.306452" />
                             <point x="1" y="0.274194" />
@@ -184,6 +195,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.553571" hotspotY="0.460317">
+                        <image-point name="Imagepoint 1" x="0.821429" y="0.222222" />
                         <collision-poly>
                             <point x="0" y="0.301587" />
                             <point x="1" y="0.269841" />
@@ -194,6 +206,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.574074" hotspotY="0.47541">
+                        <image-point name="Imagepoint 1" x="0.851852" y="0.245902" />
                         <collision-poly>
                             <point x="0" y="0.311475" />
                             <point x="1" y="0.278689" />
@@ -205,7 +218,8 @@
                     </frame>
                 </animation>
                 <animation framecount="4" loop="0" name="Kiri" pingpong="0" repeatcount="1" repeatto="0" sid="748668999359560" speed="5">
-                    <frame duration="1" hotspotX="0.574074" hotspotY="0.47541" original-source="C:\Users\OMEN\Downloads\mikey.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508197" original-source="C:\Users\OMEN\Downloads\mikey.png">
+                        <image-point name="Imagepoint 1" x="0.185185" y="0.196721" />
                         <collision-poly>
                             <point x="0" y="0.320089" />
                             <point x="1" y="0.284523" />
@@ -216,6 +230,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.574074" hotspotY="0.467742">
+                        <image-point name="Imagepoint 1" x="0.240741" y="0.258065" />
                         <collision-poly>
                             <point x="0" y="0.306452" />
                             <point x="1" y="0.274194" />
@@ -226,6 +241,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.596154" hotspotY="0.467742">
+                        <image-point name="Imagepoint 1" x="0.192308" y="0.274194" />
                         <collision-poly>
                             <point x="0" y="0.306452" />
                             <point x="1" y="0.274194" />
@@ -236,6 +252,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.574074" hotspotY="0.47541">
+                        <image-point name="Imagepoint 1" x="0.203704" y="0.213115" />
                         <collision-poly>
                             <point x="0" y="0.311475" />
                             <point x="1" y="0.278689" />
@@ -420,7 +437,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Tilemap2" sid="960434424343505">
+        <object-type name="Tile" sid="960434424343505">
             <plugin id="Tilemap" />
             <texture original-source="C:\Users\OMEN\Pictures\Tileset Pabrik Jagal.png" />
             <tiles />
@@ -438,28 +455,28 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Off" pingpong="0" repeatcount="1" repeatto="0" sid="205802205791864" speed="5">
-                    <frame duration="1" hotspotX="0.586207" hotspotY="0.569343" original-source="C:\Users\lio\Downloads\pngtree-vector-lever-switch-illustration-bezel-design-vector-png-image_5522414.png">
+                    <frame duration="1" hotspotX="0.52" hotspotY="0.464286" original-source="C:\Users\Lyo\Downloads\fuse, tombol, tempat fuse(1).png">
                         <collision-poly>
-                            <point x="0.0747126" y="0.0218978" />
-                            <point x="1" y="1" />
-                            <point x="1" y="0.175182" />
-                            <point x="1" y="0.572993" />
-                            <point x="1" y="0.989051" />
-                            <point x="1" y="1" />
-                            <point x="0.408046" y="0.912409" />
+                            <point x="0.96" y="0.115485" />
+                            <point x="0.96" y="0.964286" />
+                            <point x="0.96" y="0.673877" />
+                            <point x="0.96" y="0.964286" />
+                            <point x="0.96" y="0.964286" />
+                            <point x="0.96" y="0.964286" />
+                            <point x="0.96" y="0.964286" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="On" pingpong="0" repeatcount="1" repeatto="0" sid="337399018701423" speed="5">
-                    <frame duration="1" hotspotX="0.628571" hotspotY="0.434307" original-source="C:\Users\lio\Downloads\pngtree-vector-lever-switch-illustration-bezel-design-vector-png-image_5522414.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.464286" original-source="C:\Users\Lyo\Downloads\fuse, tombol, tempat fuse(1).png">
                         <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.0228571" y="0.854015" />
-                            <point x="0.811429" y="0.00729927" />
-                            <point x="0.988571" y="0.405109" />
-                            <point x="0.84" y="0.821168" />
-                            <point x="0.0228571" y="0.937956" />
-                            <point x="0" y="0.744526" />
+                            <point x="0" y="0.0357143" />
+                            <point x="0" y="0.964286" />
+                            <point x="0.961538" y="0.0623045" />
+                            <point x="0.961538" y="0.964286" />
+                            <point x="0.961538" y="0.964286" />
+                            <point x="0" y="0.964286" />
+                            <point x="0" y="0.964286" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -469,15 +486,15 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="202591423606162" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.515873" original-source="C:\Users\lio\Downloads\pngtree-transparent-electrical-fuse-for-circuit-protection-displayed-against-a-white-backdrop-png-image_14499634.png">
+                    <frame duration="1" hotspotX="0.571429" hotspotY="0.466667" original-source="C:\Users\Lyo\Downloads\fuse, tombol, tempat fuse.png">
                         <collision-poly>
-                            <point x="0.389706" y="0.396825" />
-                            <point x="0.5" y="0.297619" />
-                            <point x="0.908088" y="0.0753968" />
-                            <point x="0.691176" y="0.515873" />
-                            <point x="0.5" y="0.698413" />
-                            <point x="0.106618" y="0.940476" />
-                            <point x="0.205882" y="0.515873" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="1" y="0.255026" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -502,6 +519,11 @@
         </object-type>
         <object-type name="bt_Play" sid="919920000232399">
             <plugin id="Button" />
+            <behaviors>
+                <behavior-type name="Fade" sid="499866597292231">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
         </object-type>
         <object-type name="SplashScreen" sid="307379694968541">
             <plugin id="Text" />
@@ -517,7 +539,7 @@
             <plugin id="Particles" />
             <texture />
         </object-type>
-        <object-type name="TIlemapWall" sid="393295423363326">
+        <object-type name="Wall" sid="393295423363326">
             <plugin id="Tilemap" />
             <behaviors>
                 <behavior-type name="Solid" sid="939932698714133">
@@ -527,6 +549,172 @@
             <texture original-source="C:\Users\OMEN\Pictures\Tileset Pabrik Jagal.png" />
             <tiles />
         </object-type>
+        <object-type name="sp_doorlight" sid="644325440440617">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="607939572637657">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="539404032030187" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Lyo\Downloads\Light.png">
+                        <collision-poly>
+                            <point x="0.292308" y="0.292308" />
+                            <point x="0.501923" y="0.207692" />
+                            <point x="0.709616" y="0.29423" />
+                            <point x="0.796154" y="0.501923" />
+                            <point x="0.707692" y="0.707692" />
+                            <point x="0.501923" y="0.798076" />
+                            <point x="0.29423" y="0.709616" />
+                            <point x="0.20577" y="0.501923" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sp_switchlight" sid="247744484456132">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="762990882181253" speed="5">
+                    <frame duration="1" hotspotX="0.510417" hotspotY="0.494845" original-source="C:\Users\Lyo\Downloads\Light.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.515625" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.515625" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sp_fusebox" sid="864394403255494">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="133863219853007" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.486486" original-source="C:\Users\Lyo\Downloads\fuse, tombol, tempat fuse(1).png">
+                        <collision-poly>
+                            <point x="0.0526316" y="0" />
+                            <point x="1" y="0.648649" />
+                            <point x="1" y="0.27027" />
+                            <point x="0.0526316" y="0.648649" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.486486" original-source="C:\Users\Lyo\Downloads\fuse, tombol, tempat fuse(1).png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0.648649" />
+                            <point x="1" y="0.27027" />
+                            <point x="0" y="0.648649" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.486486" original-source="C:\Users\Lyo\Downloads\fuse, tombol, tempat fuse(1).png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0.648649" />
+                            <point x="1" y="0.27027" />
+                            <point x="0" y="0.648649" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.486486" original-source="C:\Users\Lyo\Downloads\fuse, tombol, tempat fuse(1).png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0.648649" />
+                            <point x="1" y="0.27027" />
+                            <point x="0" y="0.648649" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.486486" original-source="C:\Users\Lyo\Downloads\fuse, tombol, tempat fuse(1).png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.947368" y="0.648649" />
+                            <point x="0.947368" y="0.27027" />
+                            <point x="0" y="0.648649" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sp_objectLight" sid="903926935102988">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="121942762558814" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Lyo\Downloads\Light.png">
+                        <collision-poly>
+                            <point x="0.296642" y="0.296642" />
+                            <point x="0.5" y="0.214552" />
+                            <point x="0.701493" y="0.298507" />
+                            <point x="0.785448" y="0.5" />
+                            <point x="0.699627" y="0.699627" />
+                            <point x="0.5" y="0.787313" />
+                            <point x="0.298507" y="0.701493" />
+                            <point x="0.212687" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sp_glow" sid="756685395955626">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="305079543558733">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="582374689087081" speed="5">
+                    <frame duration="1" hotspotX="0.515464" hotspotY="0.510417" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Particles3" sid="486669075656568">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="obj_blood" sid="640513088990120">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="Sprite" sid="736625977319236">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="866075202800260">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="855185475662011" speed="5">
+                    <frame duration="1" hotspotX="0.452" hotspotY="0.536" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bt_L2" sid="359739429379478">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="bt_L3" sid="713643459647751">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="bt_Back2" sid="818719581317303">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="bt_Back" sid="458186975407407">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Audio" sid="697353571855341">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Sprite2" sid="142033560815252">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="882340096893671" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Lyo\Downloads\Main Menu.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -534,11 +722,12 @@
         <layout>Main Menu.xml</layout>
         <layout>Level 1.xml</layout>
         <layout>Level 2.xml</layout>
+        <layout>Template.xml</layout>
         <layout>Level 3.xml</layout>
         <layout>asset.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>es_Level 1.xml</event-sheet>
         <event-sheet>es_Asset.xml</event-sheet>
         <event-sheet>es_MainMenu.xml</event-sheet>
         <event-sheet>es_LevelSelect.xml</event-sheet>
@@ -546,8 +735,27 @@
     <global-instances>
         <global-instance type="Keyboard" uid="1" />
         <global-instance type="Mouse" uid="13" />
+        <global-instance type="Audio" uid="93">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="Boots_Walk_sound_eff_#1-1768744184611.m4a" />
+        <file name="Boots_Walk_sound_eff_#1-1768744184611.ogg" />
+        <file name="Throwing_Object_#2-1768743821555.m4a" />
+        <file name="Throwing_Object_#2-1768743821555.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">
